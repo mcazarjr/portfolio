@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
- height: 100vh;
+svg {
+  pointer-events: none;
 }
