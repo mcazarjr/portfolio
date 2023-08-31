@@ -22,9 +22,7 @@ const PortHeader = () => {
 
   return (
     <>
-      <header
-        className={`xl:container relative text-xl text-white w-full bg-primary`}
-      >
+      <header className={`relative text-xl text-white w-full bg-primary`}>
         <button
           onClick={handleMenuClick}
           name="menuButton"
