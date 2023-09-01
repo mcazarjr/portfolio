@@ -7,20 +7,20 @@ const HeroSection = () => {
   return (
     <div
       className="px-4 bg-white flex flex-col items-center justify-center pt-10 gap-8
-      lg:grid lg:grid-cols-2 lg:bg-red-100 lg:pt-24"
+      lg:grid lg:grid-cols-2 lg:py-24"
       id="home"
     >
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4 text-center">
-          <p className="text-xl font-mono flex flex-col font-semibold gap-2 lg:text-left">
-            <span>Hello 👋, I'm</span>
-            <span className="text-3xl">
+      <div className="flex flex-col gap-8 lg:gap-12">
+        <div className="flex flex-col gap-4 text-center lg:gap-6">
+          <p className="text-xl font-mono flex flex-col font-semibold gap-2 lg:text-left lg:gap-6">
+            <span className="lg:text-2xl">Hello 👋, I'm</span>
+            <span className="text-3xl lg:text-6xl">
               Meraldo <span className="text-primary">Cazar JR.</span>
             </span>
           </p>
-          <p className="font-serif flex gap-2 items-end justify-center lg:justify-start">
+          <p className="font-serif flex gap-2 items-end justify-center lg:justify-start lg:text-2xl">
             A
-            <span className="font-semibold text-2xl font-sans">
+            <span className="font-semibold text-2xl font-sans lg:text-4xl">
               {heroDescription}
             </span>
           </p>

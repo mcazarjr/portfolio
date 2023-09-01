@@ -38,7 +38,7 @@ const PortHeader = () => {
   return (
     <>
       <header
-        className={`text-xl p-4 relative lg:static lg:flex lg:justify-between lg:px-0`}
+        className={`text-xl p-4 relative lg:static lg:flex lg:justify-between xl:px-0`}
       >
         <div className="flex justify-between items-center">
           <div>
