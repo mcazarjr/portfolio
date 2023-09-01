@@ -7,20 +7,20 @@ const HeroSection = () => {
   return (
     <div
       className="px-4 bg-white flex flex-col items-center justify-center pt-10 gap-8
-      lg:grid lg:grid-cols-2 lg:py-24"
+      lg:grid lg:grid-cols-2 lg:py-16"
       id="home"
     >
       <div className="flex flex-col gap-8 lg:gap-12">
         <div className="flex flex-col gap-4 text-center lg:gap-6">
           <p className="text-xl font-mono flex flex-col font-semibold gap-2 lg:text-left lg:gap-6">
-            <span className="lg:text-2xl">Hello 👋, I'm</span>
-            <span className="text-3xl lg:text-6xl">
+            <span className="lg:text-xl xl:text-2xl">Hello 👋, I'm</span>
+            <span className="text-3xl lg:text-4xl xl:text-5xl">
               Meraldo <span className="text-primary">Cazar JR.</span>
             </span>
           </p>
-          <p className="font-serif flex gap-2 items-end justify-center lg:justify-start lg:text-2xl">
+          <p className="font-serif flex gap-2 items-end justify-center lg:justify-start lg:text-lg xl:text-2xl">
             A
-            <span className="font-semibold text-2xl font-sans lg:text-4xl">
+            <span className="font-semibold text-2xl font-sans lg:text-2xl xl:text-3xl">
               {heroDescription}
             </span>
           </p>
@@ -47,7 +47,7 @@ const HeroSection = () => {
           <img
             src={heroImageURL}
             alt="John Doe"
-            className="rounded-full w-72 border-4 border-accent2 translate-x-3"
+            className="rounded-full w-72 border-4 border-accent2 translate-x-3 lg:w-96"
           />
         </div>
 
