@@ -5,7 +5,7 @@ import AboutSection from "./AboutSection";
 const Layout = () => {
   return (
     <>
-      <div className="2xl:container xl:w-11/12 xl:mx-auto">
+      <div className="flex flex-col gap-10 md:gap-0">
         <PortHeader />
         <HeroSection />
         <AboutSection />

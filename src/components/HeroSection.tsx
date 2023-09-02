@@ -5,9 +5,9 @@ const HeroSection = () => {
   const heroDescription = "Full Stack Developer";
 
   return (
-    <div
-      className="px-4 bg-white flex flex-col items-center justify-center pt-10 gap-8
-      lg:grid lg:grid-cols-2 lg:py-16"
+    <section
+      className="2xl:container xl:w-11/12 xl:mx-auto px-4 flex flex-col items-center justify-center pt-10 gap-8
+      lg:grid lg:grid-cols-2 lg:h-[90vh] lg:pt-0"
       id="home"
     >
       <div className="flex flex-col gap-8 lg:gap-12">
@@ -91,7 +91,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
