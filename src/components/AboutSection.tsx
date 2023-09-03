@@ -5,7 +5,7 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
   return (
     <section
       id="about"
-      className=" grid gap-6 px-4 place-items-center py-8 md:py-16 lg:grid-cols-2"
+      className="2xl:container xl:w-11/12 xl:mx-auto grid gap-6 px-4 place-items-center py-8 md:py-16 lg:grid-cols-2"
       ref={ref}
     >
       <div className="flex relative pr-4">
