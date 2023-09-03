@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
 const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
+  console.log(props);
   return (
     <section
       id="projects"

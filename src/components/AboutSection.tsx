@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
-const AboutSection = forwardRef(function (props, ref: any) {
+const AboutSection = forwardRef<HTMLElement>((props, ref) => {
+  console.log(props);
   return (
     <section
       id="about"

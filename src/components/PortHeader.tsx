@@ -20,6 +20,8 @@ interface Props {
 
 const PortHeader = forwardRef<HTMLElement, Props>(
   ({ onClickEvent, sectionRefs }, ref) => {
+    console.log(sectionRefs, ref);
+
     const [menuFlag, setMenuFlag] = useState(false);
     const [activeMenu, setActiveMenu] = useState("home");
 

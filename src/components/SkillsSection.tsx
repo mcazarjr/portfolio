@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 const SkillsSection = forwardRef<HTMLElement, {}>((props, ref) => {
+  console.log(props);
   return (
     <>
       <section
