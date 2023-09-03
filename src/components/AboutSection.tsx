@@ -1,7 +1,13 @@
-const AboutSection = () => {
+import { forwardRef } from "react";
+
+const AboutSection = forwardRef(function (props, ref: any) {
   return (
-    <section className="2xl:container xl:w-11/12 xl:mx-auto grid gap-6 px-4 place-items-center md:pt-16 lg:grid-cols-2">
-      <div className="flex relative pr-4 ">
+    <section
+      id="about"
+      className=" grid gap-6 px-4 place-items-center py-8 md:py-16 lg:grid-cols-2"
+      ref={ref}
+    >
+      <div className="flex relative pr-4">
         <div className="w-full pb-16">
           <img
             src="https://picsum.photos/300"
@@ -11,8 +17,8 @@ const AboutSection = () => {
         </div>
         <div className="absolute bottom-0 right-0 w-1/3">
           <img
-            src="https://picsum.photos/200?random=x"
-            alt="John Doe 2"
+            src="images/me.jpg"
+            alt="Meraldo Cazar Jr."
             className="rounded-lg w-full"
           />
         </div>
@@ -79,6 +85,6 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default AboutSection;

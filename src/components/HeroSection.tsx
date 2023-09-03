@@ -1,14 +1,16 @@
+import { forwardRef } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-const HeroSection = () => {
+const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
   const heroImageURL = "images/mscj2.png";
   const heroDescription = "Full Stack Developer";
 
   return (
     <section
+      id="home"
+      ref={ref}
       className="2xl:container xl:w-11/12 xl:mx-auto px-4 flex flex-col items-center justify-center pt-10 gap-8
       lg:grid lg:grid-cols-2 lg:h-[90vh] lg:pt-0"
-      id="home"
     >
       <div className="flex flex-col gap-8 lg:gap-12">
         <div className="flex flex-col gap-4 text-center lg:gap-6">
@@ -93,6 +95,6 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default HeroSection;
