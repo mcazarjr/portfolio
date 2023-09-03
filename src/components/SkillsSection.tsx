@@ -36,7 +36,7 @@ const SkillsSection = forwardRef<HTMLElement, {}>((props, ref) => {
         ref={ref}
         className="flex items-center px-4 flex-wrap lg:py-8"
       >
-        <div className="2xl:container xl:w-11/12 lg:mx-auto flex gap-6 flex-wrap justify-center">
+        <div className="2xl:container xl:w-11/12 md:mx-auto flex gap-6 flex-wrap justify-center">
           {skillsIcon.map((icon, index) => (
             <div
               key={index}
