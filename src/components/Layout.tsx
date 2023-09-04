@@ -6,6 +6,7 @@ import AboutSection from "./AboutSection";
 import SkillsSection from "./SkillsSection";
 import ProjectSection from "./ProjectSection";
 import ContactSection from "./ContactSection";
+import PortFooter from "./PortFooter";
 
 const Layout = () => {
   const homeRef = useRef(null);
@@ -54,16 +55,19 @@ const Layout = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-10 md:gap-0">
+      <div className="">
         <PortHeader
           onClickEvent={scrollToSection}
           sectionRefs={sectionRefs}
         />
-        <HeroSection ref={homeRef} />
-        <AboutSection ref={aboutRef} />
-        <SkillsSection />
-        <ProjectSection ref={projectsRef} />
-        <ContactSection ref={contactRef} />
+        <main className="grid gap-24 pb-12">
+          <HeroSection ref={homeRef} />
+          <AboutSection ref={aboutRef} />
+          <SkillsSection />
+          <ProjectSection ref={projectsRef} />
+          <ContactSection ref={contactRef} />
+        </main>
+        <PortFooter />
       </div>
     </>
   );

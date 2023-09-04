@@ -8,7 +8,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
     <section
       id="projects"
       ref={ref}
-      className="2xl:container xl:w-11/12 xl:mx-auto py-8 md:pt-24 md:pb-16 px-4 grid gap-4 md:gap-16"
+      className="2xl:container xl:w-11/12 xl:mx-auto px-4 grid gap-12"
     >
       <div className="grid place-items-center">
         <h2 className="uppercase font-bold font-mono text-xl flex gap-4 items-center text-primary lg:text-2xl">
@@ -22,9 +22,9 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
         </h2>
       </div>
 
-      <article className="px-4 py-8 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5">
+      <article className="px-4 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5">
         <img
-          src="images/NeatO_Desktop.png"
+          src="images/NeatO_w2048px.webp"
           alt="NeatO Desktop"
           className="border-b pb-4 
           md:rounded-lg md:pb-2 md:shadow-md md:shadow-accent md:border-b-0 md:col-start-[3] md:col-end-6 md:row-start-1 md:row-end-2"
@@ -84,6 +84,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
           <a
             href="https://neatoapp.live"
             target="_blank"
+            rel="noreferrer"
             className="group flex items-center gap-2 text-primary border border-primary w-fit rounded-lg p-2 hover:text-white hover:bg-primary transition-all duration-200 ease-in-out "
           >
             Live Demo
@@ -96,9 +97,9 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
         </div>
       </article>
 
-      <article className="px-4 py-8 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5">
+      <article className="px-4 pt-8 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5">
         <img
-          src="images/NeatO_Desktop.png"
+          src="images/CoCare.webp"
           alt="NeatO Desktop"
           className="border-b pb-4 
           md:rounded-lg md:pb-2 md:shadow-md md:shadow-accent md:border-b-0 md:col-start-[1] md:col-end-4 md:row-start-1 md:row-end-2"
@@ -125,39 +126,28 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
           </p>
           <div className="flex gap-2 flex-wrap md:max-w-xl md:justify-end">
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              React
+              HTMl
             </p>
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              Redux
+              CSS
             </p>
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              Node.js
+              Javascript
             </p>
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              Express.js
+              Firebase
             </p>
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              MongoDB
+              Google Maps API
             </p>
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              Mongoose
-            </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
-              React Router Dom
-            </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm">
-              Tailwind
-            </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm">
-              Socket.io
-            </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm">
-              AWS
+              Service Worker
             </p>
           </div>
           <a
             href="https://neatoapp.live"
             target="_blank"
+            rel="noreferrer"
             className="group flex items-center gap-2 text-primary border border-primary w-fit rounded-lg p-2 hover:text-white hover:bg-primary transition-all duration-200 ease-in-out "
           >
             Live Demo

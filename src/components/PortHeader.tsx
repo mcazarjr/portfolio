@@ -57,7 +57,10 @@ const PortHeader = forwardRef<HTMLElement, Props>(
     return (
       <>
         <header
-          className={`2xl:container xl:w-11/12 xl:mx-auto text-xl pt-4 px-4 relative lg:static lg:flex lg:justify-between xl:px-0`}
+          className={`2xl:container xl:w-11/12 xl:mx-auto xl:px-0
+           text-xl pt-4 px-4 sticky top-0 z-50 bg-white
+           lg:flex lg:justify-between
+           `}
         >
           <div className="flex justify-between items-center">
             <div>

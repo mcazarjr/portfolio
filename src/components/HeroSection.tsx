@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
+import { ParticleContainer } from "./ParticleContainer";
+
 const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
   console.log(props);
 
@@ -11,9 +13,10 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
     <section
       id="home"
       ref={ref}
-      className="2xl:container xl:w-11/12 xl:mx-auto px-4 flex flex-col items-center justify-center pt-10 gap-8
+      className="2xl:container xl:w-11/12 xl:mx-auto px-4 flex flex-col items-center justify-center gap-8 pt-12 relative
       lg:grid lg:grid-cols-2 lg:h-[90vh] lg:pt-0"
     >
+      <ParticleContainer />
       <div className="flex flex-col gap-8 lg:gap-12">
         <div className="flex flex-col gap-4 text-center lg:gap-6">
           <p className="text-xl font-mono flex flex-col font-semibold gap-2 lg:text-left lg:gap-6">

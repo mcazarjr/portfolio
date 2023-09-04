@@ -1,0 +1,54 @@
+import {
+  ModulzLogoIcon,
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
+import { FacebbokIcon } from "../assets/Icons";
+
+const PortFooter = () => {
+  return (
+    <footer className="bg-primary text-white grid place-items-center gap-8 py-6">
+      <div className="flex items-center gap-1 justify-center">
+        <ModulzLogoIcon />
+        <span className="text-xl font-semibold font-mono">mcdev</span>
+      </div>
+      <div className="flex gap-8">
+        <a
+          href=""
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FacebbokIcon className="fill-current text-white w-6 h-6" />
+        </a>
+        <a
+          href=""
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LinkedInLogoIcon
+            width="24"
+            height="24"
+          />
+        </a>
+        <a
+          href=""
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GitHubLogoIcon
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+      <div>
+        <p>
+          All rights reserved © 2023,
+          <span className="font-bold"> Meraldo Cazar JR.</span>
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default PortFooter;
