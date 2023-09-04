@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
   console.log(props);
 
-  const heroImageURL = "images/mscj2.png";
+  const heroImageURL = "images/mscj_w300px.webp";
   const heroDescription = "Full Stack Developer";
 
   return (
