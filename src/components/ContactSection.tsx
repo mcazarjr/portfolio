@@ -9,6 +9,7 @@ import {
 import { WhatsAppIcon } from "../assets/Icons";
 
 const ContactSection = forwardRef<HTMLElement, {}>((props, ref) => {
+  console.log(props);
   return (
     <section
       id="contact"
