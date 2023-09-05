@@ -60,8 +60,8 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
 
         {/* Short Phrases */}
         <div className="grid gap-2 md:flex md:flex-col md:justify-center md:gap-4 md:-translate-x-6">
-          <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden">
-            <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] bg-white overflow-hidden -translate-x-1">
+          <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden bg-white">
+            <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] overflow-hidden -translate-x-1">
               <ArrowRightIcon
                 className="text-primary"
                 width="30"
@@ -72,8 +72,8 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               Attention to-detail
             </p>
           </div>
-          <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden">
-            <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] bg-white overflow-hidden -translate-x-1">
+          <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden bg-white">
+            <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] overflow-hidden -translate-x-1">
               <ArrowRightIcon
                 className="text-primary"
                 width="30"
@@ -84,8 +84,8 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               Team Oriented
             </p>
           </div>
-          <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden">
-            <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] bg-white overflow-hidden -translate-x-1">
+          <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden bg-white">
+            <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] overflow-hidden -translate-x-1">
               <ArrowRightIcon
                 className="text-primary"
                 width="30"

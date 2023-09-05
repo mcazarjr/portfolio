@@ -8,23 +8,19 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
       className="2xl:container xl:w-11/12 xl:mx-auto grid gap-6 px-4 place-items-center lg:grid-cols-2"
       ref={ref}
     >
-      <div className="flex relative pr-4">
-        <div className="w-full pb-16">
-          <img
-            src="https://picsum.photos/300"
-            alt="John Doe"
-            className="rounded-lg w-full"
-          />
-        </div>
-        <div className="absolute bottom-0 right-0 w-1/3">
-          <img
-            src="images/me.jpg"
-            alt="Meraldo Cazar Jr."
-            className="rounded-lg w-full"
-          />
-        </div>
+      <div className="relative w-full md:container flex lg:justify-end lg:pr-12">
+        <img
+          src="images/DevWindow.webp"
+          alt="John Doe"
+          className="rounded-lg w-full pb-16 md:pb-32 md:w-9/12"
+        />
+        <img
+          src="images/me.jpg"
+          alt="Meraldo Cazar Jr."
+          className="absolute w-2/6 bottom-0 right-0 rounded-lg md:top-[50%] md:h-1/2 object-cover object-center lg:left-0 lg:top-[40%] lg:w-2/4 lg:h-3/5"
+        />
       </div>
-      <div className="grid gap-4 md:grid-cols-[1fr_auto] lg:grid-cols-1">
+      <div className="place-self-start grid gap-4 md:grid-cols-[1fr_auto] lg:grid-cols-1">
         <div>
           <h2 className="uppercase font-bold text-primary font-mono text-lg">
             About Me
@@ -37,25 +33,27 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
             exercitationem quos doloribus quod voluptate quas.
           </p>
         </div>
-        <div className="grid gap-4 lg:grid-cols-2 ">
-          <div className="grid col-span-2 md:col-span-1">
-            <span className="font-semibold uppercase tracking-tighter">
-              Name
-            </span>
-            <span>Meraldo S. Cazar Jr.</span>
-          </div>
-          <div className="grid col-span-2 md:col-span-1">
-            <span className="font-semibold uppercase tracking-tighter">
-              Email
-            </span>
-            <span>
-              <a
-                href="mailto:meraldocazar@gmail.com"
-                className="hover:underline"
-              >
-                meraldocazar@gmail.com
-              </a>
-            </span>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="col-span-2 grid gap-6 md:grid-cols-2 md:gap-0">
+            <div className="grid">
+              <span className="font-semibold uppercase tracking-tighter">
+                Name
+              </span>
+              <span>Meraldo S. Cazar Jr.</span>
+            </div>
+            <div className="grid">
+              <span className="font-semibold uppercase tracking-tighter">
+                Email
+              </span>
+              <span>
+                <a
+                  href="mailto:meraldocazar@gmail.com"
+                  className="hover:underline"
+                >
+                  meraldocazar@gmail.com
+                </a>
+              </span>
+            </div>
           </div>
           <div className="grid col-span-2">
             <span className="font-semibold uppercase tracking-tighter">

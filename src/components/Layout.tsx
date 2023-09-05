@@ -60,7 +60,7 @@ const Layout = () => {
           onClickEvent={scrollToSection}
           sectionRefs={sectionRefs}
         />
-        <main className="grid gap-24 pb-12">
+        <main className="grid gap-24 pb-12 border-r border-l border-primary">
           <HeroSection ref={homeRef} />
           <AboutSection ref={aboutRef} />
           <SkillsSection />
