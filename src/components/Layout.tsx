@@ -46,7 +46,7 @@ const Layout = () => {
         });
       } else {
         window.scrollTo({
-          top: offsetTop,
+          top: offsetTop - 500,
           behavior: "smooth",
         });
       }

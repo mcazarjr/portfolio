@@ -5,27 +5,26 @@ import { loadFull } from "tsparticles";
 
 export const ParticleContainer = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadFull(engine);
   }, []);
 
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
-      await console.log(container);
+      console.log(container);
     },
     []
   );
+
   return (
     <Particles
       id="tsparticles"
-      className="absolute inset-0 z-[-1]"
       init={particlesInit}
       loaded={particlesLoaded}
+      className="absolute inset-0 z-[-1]"
       options={{
-        fpsLimit: 120,
+        fpsLimit: 60,
         fullScreen: {
           enable: false,
-          zIndex: -1,
         },
         particles: {
           color: {
@@ -49,17 +48,10 @@ export const ParticleContainer = () => {
             straight: false,
           },
           number: {
-            density: {
-              enable: true,
-              area: 1000,
-            },
             value: 60,
           },
           opacity: {
             value: 0.5,
-          },
-          shape: {
-            type: "circle",
           },
           size: {
             value: { min: 1, max: 5 },

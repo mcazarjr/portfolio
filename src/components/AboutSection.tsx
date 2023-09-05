@@ -37,14 +37,14 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
             exercitationem quos doloribus quod voluptate quas.
           </p>
         </div>
-        <div className="grid gap-4 lg:grid-cols-2">
-          <div className="grid">
+        <div className="grid gap-4 lg:grid-cols-2 ">
+          <div className="grid col-span-2 md:col-span-1">
             <span className="font-semibold uppercase tracking-tighter">
               Name
             </span>
             <span>Meraldo S. Cazar Jr.</span>
           </div>
-          <div className="grid">
+          <div className="grid col-span-2 md:col-span-1">
             <span className="font-semibold uppercase tracking-tighter">
               Email
             </span>
