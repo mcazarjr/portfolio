@@ -1,13 +1,28 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 import { Component1Icon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
-const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
-  console.log(props);
+const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
+  const articleRef = useRef<HTMLElement>(null);
+  const article2Ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: articleRef,
+    offset: ["0 1", "1 1"],
+  });
+  const { scrollYProgress: scrollYProgress2 } = useScroll({
+    target: article2Ref,
+    offset: ["0 1", "1 1"],
+  });
+
+  useEffect(() => {
+    console.log(scrollYProgress);
+  }, [scrollYProgress]);
+
   return (
     <section
       id="projects"
-      ref={ref}
+      ref={sectionRef}
       className="2xl:container xl:w-11/12 xl:mx-auto px-4 grid gap-12"
     >
       <div className="grid place-items-center">
@@ -22,7 +37,11 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
         </h2>
       </div>
 
-      <article className="px-4 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5">
+      <motion.article
+        ref={articleRef}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        className="px-4 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5"
+      >
         <img
           src="images/NeatO_w2048px.webp"
           alt="NeatO Desktop"
@@ -95,9 +114,13 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
             />
           </a>
         </div>
-      </article>
+      </motion.article>
 
-      <article className="px-4 pt-8 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5">
+      <motion.article
+        ref={article2Ref}
+        style={{ scale: scrollYProgress2, opacity: scrollYProgress2 }}
+        className="px-4 pt-8 rounded-lg flex flex-col gap-4 md:grid md:grid-cols-5"
+      >
         <img
           src="images/CoCare.webp"
           alt="NeatO Desktop"
@@ -158,7 +181,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>((props, ref) => {
             />
           </a>
         </div>
-      </article>
+      </motion.article>
     </section>
   );
 });
