@@ -13,9 +13,7 @@ import {
   SocketIOIcon,
 } from "../assets/Icons";
 
-const SkillsSection = forwardRef<HTMLElement, {}>((props, ref) => {
-  console.log(props);
-
+const SkillsSection = forwardRef<HTMLElement, {}>(({}, ref) => {
   const skillsIcon = [
     { comp: <ReactIcon />, compName: "React" },
     { comp: <NodeJSIcon />, compName: "NodeJS" },
@@ -38,11 +36,11 @@ const SkillsSection = forwardRef<HTMLElement, {}>((props, ref) => {
       >
         <div className="2xl:container xl:w-11/12 md:mx-auto flex gap-6 flex-wrap justify-center">
           {skillsIcon.map((icon, index) => (
-            <div className="grid place-items-center gap-2">
-              <div
-                key={index}
-                className="rounded-full cursor-pointer w-20 h-20 p-4 shadow-md shadow-slate-300 flex flex-col justify-center items-center hover:shadow-accent"
-              >
+            <div
+              className="grid place-items-center gap-2"
+              key={index}
+            >
+              <div className="rounded-full cursor-pointer w-20 h-20 p-4 shadow-md shadow-slate-300 flex flex-col justify-center items-center hover:shadow-accent">
                 {icon.comp}
               </div>
               <span>{icon.compName}</span>
