@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useRef } from "react";
 
 import {
   Component1Icon,
@@ -7,13 +7,22 @@ import {
 } from "@radix-ui/react-icons";
 
 import { WhatsAppIcon } from "../assets/Icons";
+import { motion, useScroll } from "framer-motion";
 
-const ContactSection = forwardRef<HTMLElement, {}>((props, ref) => {
-  console.log(props);
+const ContactSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
+  const { scrollYProgress } = useScroll({
+    target: sectionRef as any,
+    offset: ["0 1", "1 1"],
+  });
+
   return (
-    <section
+    <motion.section
       id="contact"
-      ref={ref}
+      ref={sectionRef}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
       className="2xl:container xl:w-11/12 xl:mx-auto px-4 grid gap-12"
     >
       <div className="grid place-items-center">
@@ -57,7 +66,7 @@ const ContactSection = forwardRef<HTMLElement, {}>((props, ref) => {
               Phone
             </a>
             <a
-              href="tel:+1-236-339-3611"
+              href="https://wa.me/12363393611"
               className="group w-32 p-2 flex justify-center items-center gap-2 border border-primary rounded-md hover:text-white hover:bg-primary text-primary"
             >
               <WhatsAppIcon
@@ -139,7 +148,7 @@ const ContactSection = forwardRef<HTMLElement, {}>((props, ref) => {
           </button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 });
 

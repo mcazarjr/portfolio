@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 import {
   ReactIcon,
@@ -27,11 +28,17 @@ const SkillsSection = forwardRef<HTMLElement, {}>(({}, ref) => {
     { comp: <SocketIOIcon />, compName: "Socket.IO" },
   ];
 
+  const { scrollYProgress } = useScroll({
+    target: ref as any,
+    offset: ["0 1", "0.5 1"],
+  });
+
   return (
     <>
-      <section
+      <motion.section
         id="skills"
         ref={ref}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
         className="flex items-center px-4 flex-wrap"
       >
         <div className="2xl:container xl:w-11/12 md:mx-auto flex gap-6 flex-wrap justify-center">
@@ -47,7 +54,7 @@ const SkillsSection = forwardRef<HTMLElement, {}>(({}, ref) => {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
     </>
   );
 });

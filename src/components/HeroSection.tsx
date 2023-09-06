@@ -3,9 +3,11 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { ParticleContainer } from "./ParticleContainer";
 
-const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
-  console.log(props);
+interface Props {
+  onClickEvent: (sectionID: string) => void;
+}
 
+const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
   const heroImageURL = "images/mscj_w512px.webp";
   const heroDescription = "Full Stack Developer";
 
@@ -36,14 +38,16 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           <button
             className="bg-primary px-6 py-3 rounded-lg text-white font-semibold uppercase
           hover:bg-secondary
-          transition-all duration-200 ease-in-out"
+            transition-all duration-200 ease-in-out"
+            onClick={() => props.onClickEvent("contact")}
           >
             Hire me
           </button>
           <button
             className="font-semibold uppercase text-primary px-6 py-3 border rounded-lg border-primary
           hover:bg-secondary hover:text-white hover:border-white
-          transition-all duration-200 ease-in-out"
+            transition-all duration-200 ease-in-out"
+            onClick={() => props.onClickEvent("projects")}
           >
             View my work
           </button>

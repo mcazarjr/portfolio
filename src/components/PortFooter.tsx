@@ -14,14 +14,14 @@ const PortFooter = () => {
       </div>
       <div className="flex gap-8">
         <a
-          href=""
+          href="https://fb.com/mscj.dev"
           target="_blank"
           rel="noreferrer"
         >
           <FacebbokIcon className="fill-current text-white w-6 h-6" />
         </a>
         <a
-          href=""
+          href="https://linkedin.com/in/mscjr"
           target="_blank"
           rel="noreferrer"
         >
@@ -31,7 +31,7 @@ const PortFooter = () => {
           />
         </a>
         <a
-          href=""
+          href="https://github.com/mcazarjr"
           target="_blank"
           rel="noreferrer"
         >

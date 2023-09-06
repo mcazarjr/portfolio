@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
@@ -8,18 +8,10 @@ export const ParticleContainer = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      console.log(container);
-    },
-    []
-  );
-
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       className="absolute inset-0 z-[-1]"
       options={{
         fpsLimit: 60,

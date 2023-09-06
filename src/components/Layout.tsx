@@ -14,14 +14,8 @@ const Layout = () => {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const sectionRefs = {
-    home: homeRef,
-    about: aboutRef,
-    projects: projectsRef,
-    contact: contactRef,
-  };
-
   const scrollToSection = (sectionID: string) => {
+    event?.preventDefault();
     let selectedRef = null;
     switch (sectionID) {
       case "about":
@@ -46,7 +40,7 @@ const Layout = () => {
         });
       } else {
         window.scrollTo({
-          top: offsetTop - 500,
+          top: offsetTop - 75,
           behavior: "smooth",
         });
       }
@@ -56,12 +50,12 @@ const Layout = () => {
   return (
     <>
       <div className="">
-        <PortHeader
-          onClickEvent={scrollToSection}
-          sectionRefs={sectionRefs}
-        />
+        <PortHeader onClickEvent={scrollToSection} />
         <main className="grid gap-24 pb-12 border-r border-l border-primary">
-          <HeroSection ref={homeRef} />
+          <HeroSection
+            ref={homeRef}
+            onClickEvent={scrollToSection}
+          />
           <AboutSection ref={aboutRef} />
           <SkillsSection />
           <ProjectSection ref={projectsRef} />

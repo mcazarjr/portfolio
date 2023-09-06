@@ -1,10 +1,19 @@
-import { forwardRef } from "react";
+import { forwardRef, useRef, useEffect } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
-const AboutSection = forwardRef<HTMLElement>((props, ref) => {
-  console.log(props);
+const AboutSection = forwardRef<HTMLElement>(({}, ref) => {
+  const { scrollYProgress } = useScroll({
+    target: ref as any,
+    offset: ["0 1", "0.5 1"],
+  });
+
   return (
-    <section
+    <motion.section
       id="about"
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
       className="2xl:container xl:w-11/12 xl:mx-auto grid gap-6 px-4 place-items-center lg:grid-cols-2"
       ref={ref}
     >
@@ -26,11 +35,20 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
             About Me
           </h2>
           <p className="leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptatum, quibusdam, quia, quae voluptates voluptatibus
-            exercitationem quos doloribus quod voluptate quas. Quisquam
-            voluptatum, quibusdam, quia, quae voluptates voluptatibus
-            exercitationem quos doloribus quod voluptate quas.
+            With nearly a decade of professional experience in Information
+            Technology, I've honed my skills across diverse roles such as System
+            Administrator and Consumer Welfare Assistant. Specializing in a wide
+            array of programming languages and tools, including HTML, CSS,
+            Javascript, MySQL, C#, Java, and PHP, I bring meticulous attention
+            to detail to every project I tackle.
+          </p>
+          <p className="leading-relaxed mt-2">
+            Currently furthering my education in Web and Mobile App Design &
+            Development at Langara College, I am deeply committed to continuous
+            learning. My approach is team-oriented and agile, allowing me to
+            adapt quickly to new challenges and collaborate effectively with
+            colleagues. These traits make me a reliable and dynamic contributor
+            to any project or team.
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
@@ -82,7 +100,7 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 });
 

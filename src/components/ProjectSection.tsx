@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef } from "react";
+import { forwardRef, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 
 import { Component1Icon, ExternalLinkIcon } from "@radix-ui/react-icons";
@@ -6,23 +6,26 @@ import { Component1Icon, ExternalLinkIcon } from "@radix-ui/react-icons";
 const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
   const articleRef = useRef<HTMLElement>(null);
   const article2Ref = useRef<HTMLElement>(null);
+
+  const { scrollYProgress: sectionScrollProgress } = useScroll({
+    target: sectionRef as any,
+    offset: ["0 1", "0.1 1"],
+  });
+
   const { scrollYProgress } = useScroll({
     target: articleRef,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "0.5 1"],
   });
   const { scrollYProgress: scrollYProgress2 } = useScroll({
     target: article2Ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "0.5 1"],
   });
 
-  useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
-
   return (
-    <section
+    <motion.section
       id="projects"
       ref={sectionRef}
+      style={{ scale: sectionScrollProgress, opacity: sectionScrollProgress }}
       className="2xl:container xl:w-11/12 xl:mx-auto px-4 grid gap-12"
     >
       <div className="grid place-items-center">
@@ -60,14 +63,27 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
               Neat-O
             </h4>
           </div>
-          <p className="md:bg-primary md:p-4 md:rounded-lg md:text-white md:max-w-xl">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-            error dignissimos quia quasi. Doloremque possimus sint pariatur
-            quibusdam, atque quam excepturi, iure nisi voluptatibus magni unde
-            sed repudiandae omnis modi mollitia corrupti iusto magnam fugiat
-            veritatis officia molestiae? Ipsum aspernatur ratione adipisci
-            consequatur nostrum enim modi perspiciatis voluptas, sed impedit!
-          </p>
+          <div className="md:bg-primary md:p-4 md:rounded-lg md:text-white md:max-w-xl grid gap-4">
+            <p>
+              As a term project from Langara, our dedicated team of three
+              designers and three developers successfully transformed the
+              concept of Streamline Cleaning into a minimal viable product in
+              just 12 weeks.
+            </p>
+            <p>
+              This innovative app aims to modernize the cleaning industry with a
+              highly efficient management system that simplifies task handling
+              and staff scheduling.
+            </p>
+            <p>
+              With features like the Workload Tracker, our app helps you manage
+              tasks effectively, even in the most challenging environments.
+              Designed to foster tight communication between managers and
+              housekeepers, Streamline Cleaning is your go-to tool for
+              streamlining operations and bringing modern efficiency to every
+              sweep, scrub, and polish.
+            </p>
+          </div>
           <div className="flex gap-2 flex-wrap md:max-w-xl">
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
               React
@@ -168,7 +184,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
             </p>
           </div>
           <a
-            href="https://neatoapp.live"
+            href="https://cocare-d7fc8.web.app/"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-2 text-primary border border-primary w-fit rounded-lg p-2 hover:text-white hover:bg-primary transition-all duration-200 ease-in-out "
@@ -182,7 +198,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
           </a>
         </div>
       </motion.article>
-    </section>
+    </motion.section>
   );
 });
 
