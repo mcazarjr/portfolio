@@ -32,7 +32,7 @@ const PortHeader = (props: Props) => {
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
       rootMargin: "0px 0px 0px 0px",
-      threshold: 0.2,
+      threshold: [0, 0.25, 0.5, 0.75, 1],
     });
 
     menuItems.forEach((item) => {
@@ -69,7 +69,6 @@ const PortHeader = (props: Props) => {
     const elementType = e.target.nodeName.toLowerCase();
     if (elementType === "a") {
       const menuName = e.target.innerText.toLowerCase();
-      setActiveMenu(menuName);
       props.onClickEvent(menuName);
     }
   };
