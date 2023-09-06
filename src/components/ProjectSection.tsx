@@ -155,14 +155,28 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
               Neat-O
             </h4>
           </div>
-          <p className="md:bg-primary md:p-4 md:rounded-lg md:text-white md:max-w-xl">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-            error dignissimos quia quasi. Doloremque possimus sint pariatur
-            quibusdam, atque quam excepturi, iure nisi voluptatibus magni unde
-            sed repudiandae omnis modi mollitia corrupti iusto magnam fugiat
-            veritatis officia molestiae? Ipsum aspernatur ratione adipisci
-            consequatur nostrum enim modi perspiciatis voluptas, sed impedit!
-          </p>
+
+          <div className="md:bg-primary md:p-4 md:rounded-lg md:text-white md:max-w-xl grid gap-4">
+            <p>
+              In a focused 12-week period at Langara, our talented team of four
+              designers and three developers came together to create CoCare—an
+              app crafted by dedicated parents and individuals who understand
+              the challenges of balancing work and family life.
+            </p>
+            <p>
+              CoCare is designed to offer a safe, nurturing environment for
+              children after school, empowering them to reach their full
+              potential.
+            </p>
+            <p>
+              We firmly believe that by fostering community collaboration, we
+              can provide the highest level of care and support for our
+              children. Tailored to meet the unique needs of working parents,
+              CoCare ensures that each child feels valued and supported,
+              allowing parents to focus on work without compromising on family
+              well-being.
+            </p>
+          </div>
           <div className="flex gap-2 flex-wrap md:max-w-xl md:justify-end">
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
               HTMl

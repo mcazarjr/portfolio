@@ -51,7 +51,7 @@ const Layout = () => {
     <>
       <div className="">
         <PortHeader onClickEvent={scrollToSection} />
-        <main className="grid gap-24 pb-12 border-r border-l border-primary">
+        <main className="grid gap-24 pb-12">
           <HeroSection
             ref={homeRef}
             onClickEvent={scrollToSection}
