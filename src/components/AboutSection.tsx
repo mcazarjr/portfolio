@@ -1,5 +1,5 @@
-import { forwardRef, useRef, useEffect } from "react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { forwardRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 const AboutSection = forwardRef<HTMLElement>(({}, ref) => {
   const { scrollYProgress } = useScroll({
