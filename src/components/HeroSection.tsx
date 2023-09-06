@@ -1,8 +1,10 @@
 import { forwardRef } from "react";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { ParticleContainer } from "./ParticleContainer";
 import { TypeAnimation } from "react-type-animation";
+// import Lottie from "lottie-react";
+// import animationData from "../assets/DevAnimation.json";
 
 interface Props {
   onClickEvent: (sectionID: string) => void;
@@ -70,6 +72,10 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
             className="rounded-full w-72 border-4 border-accent2 translate-x-3 lg:w-96"
           />
         </div>
+        {/* <Lottie
+          animationData={animationData}
+          className="w-72 lg:w-"
+        /> */}
 
         {/* Short Phrases */}
         <div className="grid gap-2 md:flex md:flex-col md:justify-center md:gap-4 md:-translate-x-6">
