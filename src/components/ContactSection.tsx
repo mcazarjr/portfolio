@@ -8,6 +8,7 @@ import {
 
 import { WhatsAppIcon } from "../assets/Icons";
 import { motion, useScroll } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 const ContactSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
   const { scrollYProgress } = useScroll({
@@ -90,63 +91,7 @@ const ContactSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
             OR
           </span>
         </div>
-        <form className="flex flex-col gap-4 w-full">
-          <div>
-            <label
-              htmlFor="name"
-              className="sr-only"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              className="w-full border border-primary rounded-md p-2"
-              required={true}
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="sr-only"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              className="w-full border border-primary rounded-md p-2"
-              required={true}
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="message"
-              className="sr-only"
-            >
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Message"
-              className="w-full border border-primary rounded-md p-2 h-44"
-              required={true}
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-primary text-white rounded-md p-2 max-w-[10rem] self-end
-            hover:bg-secondary transition-colors duration-300 ease-in-out"
-          >
-            Send
-          </button>
-        </form>
+        <ContactForm />
       </div>
     </motion.section>
   );
