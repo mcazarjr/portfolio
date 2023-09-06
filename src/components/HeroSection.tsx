@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { ParticleContainer } from "./ParticleContainer";
+import { TypeAnimation } from "react-type-animation";
 
 interface Props {
   onClickEvent: (sectionID: string) => void;
@@ -9,7 +10,6 @@ interface Props {
 
 const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
   const heroImageURL = "images/mscj_w512px.webp";
-  const heroDescription = "Full Stack Developer";
 
   return (
     <section
@@ -29,9 +29,18 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
           </p>
           <p className="font-serif flex gap-2 items-end justify-center lg:justify-start lg:text-lg xl:text-2xl">
             A
-            <span className="font-semibold text-2xl font-sans lg:text-2xl xl:text-3xl">
-              {heroDescription}
-            </span>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed once, initially
+                " ",
+                1000,
+                " Full Stack Developer",
+                1000,
+              ]}
+              speed={50}
+              repeat={Infinity}
+              className="font-semibold text-2xl font-sans xl:text-3xl"
+            />
           </p>
         </div>
         <div className="flex gap-6">
@@ -54,7 +63,7 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
         </div>
       </div>
       <div className="grid justify-items-center gap-2 md:flex md:justify-center">
-        <div className="border-4 border-secondary rounded-full py-4">
+        <div className="border-4 border-secondary rounded-full py-4 -translate-x-1 md:translate-x-0">
           <img
             src={heroImageURL}
             alt="John Doe"

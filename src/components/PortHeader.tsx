@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   ModulzLogoIcon,
@@ -12,7 +12,7 @@ interface Props {
 
 const PortHeader = (props: Props) => {
   const [menuFlag, setMenuFlag] = useState(false);
-  const [activeMenu, setActiveMenu] = useState("home");
+  const [activeMenu, setActiveMenu] = useState<string>("home");
 
   const menuItems = [
     { name: "home", label: "Home" },
@@ -20,6 +20,37 @@ const PortHeader = (props: Props) => {
     { name: "projects", label: "Projects" },
     { name: "contact", label: "Contact" },
   ];
+
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveMenu(entry.target.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0.2,
+    });
+
+    menuItems.forEach((item) => {
+      const section = document.getElementById(item.name);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      menuItems.forEach((item) => {
+        const section = document.getElementById(item.name);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, [menuItems]);
 
   const activeMenuStyle = "text-primary";
   const inactiveMenuStyle = "hover:text-secondary";
@@ -94,8 +125,7 @@ const PortHeader = (props: Props) => {
               href={`#${item.name}`}
               className={`${
                 activeMenu === item.name ? activeMenuStyle : inactiveMenuStyle
-              } ${defaultMenuStyle}  
-            `}
+              } ${defaultMenuStyle}`}
               onClick={handleMenuClick}
             >
               {item.label}
