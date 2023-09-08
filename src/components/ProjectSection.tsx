@@ -152,7 +152,7 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
               Recent Project
             </h3>
             <h4 className="font-semibold font-mono text-2xl flex items-center gap-2">
-              Neat-O
+              CoCare
             </h4>
           </div>
 

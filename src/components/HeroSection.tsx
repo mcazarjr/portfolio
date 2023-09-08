@@ -1,17 +1,17 @@
 import { forwardRef } from "react";
 
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+// import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { ParticleContainer } from "./ParticleContainer";
 import { TypeAnimation } from "react-type-animation";
-// import Lottie from "lottie-react";
-// import animationData from "../assets/DevAnimation.json";
+import Lottie from "lottie-react";
+import animationData from "../assets/DevAnimation.json";
 
 interface Props {
   onClickEvent: (sectionID: string) => void;
 }
 
 const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
-  const heroImageURL = "images/mscj_w512px.webp";
+  // const heroImageURL = "images/mscj_w512px.webp";
 
   return (
     <section
@@ -64,7 +64,11 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
           </button>
         </div>
       </div>
-      <div className="grid justify-items-center gap-2 md:flex md:justify-center">
+      <Lottie
+        animationData={animationData}
+        className="w-3/4 lg:w-3/4 place-self-center"
+      />
+      {/* <div className="grid justify-items-center gap-2 md:flex md:justify-center">
         <div className="border-4 border-secondary rounded-full py-4 -translate-x-1 md:translate-x-0">
           <img
             src={heroImageURL}
@@ -72,12 +76,8 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
             className="rounded-full w-72 border-4 border-accent2 translate-x-3 lg:w-96"
           />
         </div>
-        {/* <Lottie
-          animationData={animationData}
-          className="w-72 lg:w-"
-        /> */}
 
-        {/* Short Phrases */}
+        {/* Short Phrases
         <div className="grid gap-2 md:flex md:flex-col md:justify-center md:gap-4 md:-translate-x-6">
           <div className="grid grid-cols-[auto_1fr] gap-3 border border-primary rounded-lg h-[4rem] w-[10rem] items-center overflow-hidden bg-white">
             <div className="pl-3 h-full flex items-center pr-2 border-r border-r-primary -skew-x-[10deg] overflow-hidden -translate-x-1">
@@ -116,7 +116,7 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 });
