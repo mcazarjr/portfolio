@@ -196,6 +196,9 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
             <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
               Service Worker
             </p>
+            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+              PWA
+            </p>
           </div>
           <a
             href="https://cocare-d7fc8.web.app/"

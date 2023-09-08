@@ -38,6 +38,8 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
                 1000,
                 " Full Stack Developer",
                 1000,
+                " Web Developer",
+                1000,
               ]}
               speed={50}
               repeat={Infinity}
