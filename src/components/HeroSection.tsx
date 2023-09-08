@@ -30,7 +30,6 @@ const HeroSection = forwardRef<HTMLElement, Props>((props, ref) => {
             </span>
           </p>
           <p className="font-serif flex gap-2 items-end justify-center lg:justify-start lg:text-lg xl:text-2xl">
-            A
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed once, initially
