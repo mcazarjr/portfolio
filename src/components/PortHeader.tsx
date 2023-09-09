@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 
-import {
-  ModulzLogoIcon,
-  HamburgerMenuIcon,
-  Cross1Icon,
-} from "@radix-ui/react-icons";
+import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+
+import { MCLogo } from "../assets/Icons";
 
 interface Props {
   onClickEvent: (sectionID: string) => void;
@@ -83,11 +81,7 @@ const PortHeader = (props: Props) => {
       >
         <div className="flex justify-between items-center">
           <div>
-            <ModulzLogoIcon
-              className="text-primary"
-              width="30"
-              height="30"
-            />
+            <MCLogo className="fill-current text-primary w-10 h-10" />
           </div>
           <button
             onClick={handleMenuClick}

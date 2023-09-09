@@ -1,15 +1,11 @@
-import {
-  ModulzLogoIcon,
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-} from "@radix-ui/react-icons";
-import { FacebbokIcon } from "../assets/Icons";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { FacebbokIcon, MCLogo } from "../assets/Icons";
 
 const PortFooter = () => {
   return (
     <footer className="bg-primary text-white grid place-items-center gap-8 py-6">
-      <div className="flex items-center gap-1 justify-center">
-        <ModulzLogoIcon />
+      <div className="flex items-center gap-2 justify-center">
+        <MCLogo className="fill-current text-white w-8 h-8" />
         <span className="text-xl font-semibold font-mono">mcdev</span>
       </div>
       <div className="flex gap-8">
