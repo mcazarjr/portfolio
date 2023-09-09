@@ -80,13 +80,13 @@ const AboutSection = forwardRef<HTMLElement>(({}, ref) => {
             <div className="flex flex-col gap-2">
               <p className="grid">
                 Web and Mobile Application Development and Design
-                <span className="text-sm text-slate-400">
+                <span className="text-sm text-slate-500">
                   Langara College, Vancouver, BC, Canada
                 </span>
               </p>
               <p className="grid">
                 Bachelor of Science in Information Technology
-                <span className="text-sm text-slate-400">
+                <span className="text-sm text-slate-500">
                   Saint Louis University, Baguio City, Philippines
                 </span>
               </p>

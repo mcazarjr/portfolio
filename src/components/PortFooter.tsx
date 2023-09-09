@@ -17,6 +17,7 @@ const PortFooter = () => {
           href="https://fb.com/mscj.dev"
           target="_blank"
           rel="noreferrer"
+          aria-label="Facebook"
         >
           <FacebbokIcon className="fill-current text-white w-6 h-6" />
         </a>
@@ -24,6 +25,7 @@ const PortFooter = () => {
           href="https://linkedin.com/in/mscjr"
           target="_blank"
           rel="noreferrer"
+          aria-label="LinkedIn"
         >
           <LinkedInLogoIcon
             width="24"
@@ -34,6 +36,7 @@ const PortFooter = () => {
           href="https://github.com/mcazarjr"
           target="_blank"
           rel="noreferrer"
+          aria-label="GitHub"
         >
           <GitHubLogoIcon
             width="24"

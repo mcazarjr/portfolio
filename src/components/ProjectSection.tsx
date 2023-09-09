@@ -85,34 +85,34 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
             </p>
           </div>
           <div className="flex gap-2 flex-wrap md:max-w-xl">
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               React
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Redux
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Node.js
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Express.js
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               MongoDB
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Mongoose
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               React Router Dom
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm">
               Tailwind
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm">
               Socket.io
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm">
               AWS
             </p>
           </div>
@@ -178,25 +178,25 @@ const ProjectSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
             </p>
           </div>
           <div className="flex gap-2 flex-wrap md:max-w-xl md:justify-end">
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               HTMl
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               CSS
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Javascript
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Firebase
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Google Maps API
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               Service Worker
             </p>
-            <p className="rounded-lg border px-2 border-accent text-slate-400 text-sm bg-white">
+            <p className="rounded-lg border px-2 border-accent text-slate-500 text-sm bg-white">
               PWA
             </p>
           </div>
