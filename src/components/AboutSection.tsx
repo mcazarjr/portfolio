@@ -19,7 +19,7 @@ const AboutSection = forwardRef<HTMLElement>(({}, ref) => {
     >
       <div className="relative w-full md:container flex lg:justify-end lg:pr-12">
         <img
-          src="images/DevWindow.webp"
+          src="images/DevWindow2.webp"
           alt="John Doe"
           className="rounded-lg w-full pb-16 md:pb-32 md:w-9/12"
         />
