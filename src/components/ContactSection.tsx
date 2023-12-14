@@ -66,16 +66,6 @@ const ContactSection = forwardRef<HTMLElement, {}>(({}, sectionRef) => {
               />
               Phone
             </a>
-            <a
-              href="https://wa.me/12363393611"
-              className="group w-32 p-2 flex justify-center items-center gap-2 border border-primary rounded-md hover:text-white hover:bg-primary text-primary"
-            >
-              <WhatsAppIcon
-                className="w-5 h-5 fill-primary group-hover:fill-white"
-                inner_fill="fill-white group-hover:fill-primary"
-              />
-              WhatsApp
-            </a>
           </div>
         </div>
         <div className="grid place-items-center w-full gap-4">
