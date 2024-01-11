@@ -1,6 +1,10 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { FacebbokIcon, MCLogo } from "../assets/Icons";
 
+/*
+  Footer Area
+ */
+
 const PortFooter = () => {
   return (
     <footer className="bg-primary text-white grid place-items-center gap-8 py-6">
