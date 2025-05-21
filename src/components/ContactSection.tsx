@@ -6,7 +6,7 @@ import {
   MobileIcon,
 } from "@radix-ui/react-icons";
 
-import { WhatsAppIcon } from "../assets/Icons";
+// import { WhatsAppIcon } from "../assets/Icons";
 import { motion, useScroll } from "framer-motion";
 import ContactForm from "./ContactForm";
 
